@@ -1,0 +1,19 @@
+[[pages]]
+path = "pages/home.py"
+name = "Home"
+icon = "🏠"
+
+[[pages]]
+path = "pages/roadmap_generator.py"
+name = "Roadmap Generator"
+icon = "🗺️"
+
+[[pages]]
+path = "pages/chat.py"
+name = "Chat"
+icon = "💬"
+
+[[pages]]
+path = "pages/popular_roadmaps.py"
+name = "Popular Roadmaps"
+icon = "🗺️"
