@@ -1,2 +1,4 @@
 roadmap.pem
-roadmap
+roadmap/
+roadmap/*
+__pycache__/

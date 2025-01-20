@@ -160,19 +160,15 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 
-# Data for IT jobs (You can replace this with real data or API responses)
 job_titles = ['Software Engineer', 'DevOps Engineer', 'Data Scientist', 'Cybersecurity Analyst', 'Cloud Architect']
 average_salaries = [120000, 115000, 130000, 110000, 140000]
 job_demand = [85, 90, 92, 80, 95]  # Hypothetical job demand percentage
 
-# Create a DataFrame
 data = {'Job Title': job_titles, 'Average Salary (USD)': average_salaries, 'Job Demand (%)': job_demand}
 df = pd.DataFrame(data)
 
-# Set the page configuration (only once, at the top)
 st.set_page_config(page_title="IT Jobs Salary and Demand Comparison", layout="wide")
 
-# Function to show the home page with charts
 def show_home():
     st.markdown(
         """
@@ -226,7 +222,6 @@ def show_home():
         <div class="landing-subtitle">Ask questions, generate personalized roadmaps, and explore popular IT career paths</div>
         """, unsafe_allow_html=True)
 
-    # Feature boxes with descriptions
     st.markdown("""
         <div class="features">
             <div class="feature-box">
@@ -244,11 +239,9 @@ def show_home():
         </div>
     """, unsafe_allow_html=True)
 
-    # Chart for IT Jobs Salary and Demand Comparison
     st.markdown("<hr>", unsafe_allow_html=True)  # Add a horizontal line
     st.markdown("<h2 style='text-align: center; color: #4CAF50;'>IT Jobs Salary and Demand Comparison</h2>", unsafe_allow_html=True)
 
-    # Create an interactive bar chart with Plotly
     fig_bar = px.bar(df, 
                      x='Job Title', 
                      y='Average Salary (USD)', 
@@ -259,7 +252,6 @@ def show_home():
                      text='Job Demand (%)',  # Show job demand percentage on top of the bars
                      template='plotly_dark')  # A dark theme for the chart
 
-    # Customize the layout for the bar chart
     fig_bar.update_layout(
         xaxis_title='Job Title',
         yaxis_title='Average Salary (USD)',
@@ -268,14 +260,11 @@ def show_home():
         font=dict(family='Arial, sans-serif', size=14, color='white'),  # Font styling
     )
 
-    # Display the bar chart in Streamlit
     st.plotly_chart(fig_bar)
 
-    # Pie chart for Job Demand Distribution
     st.markdown("<hr>", unsafe_allow_html=True)  # Add another horizontal line
     st.markdown("<h2 style='text-align: center; color: #4CAF50;'>Job Demand Distribution</h2>", unsafe_allow_html=True)
 
-    # Create a pie chart for job demand distribution
     fig_pie = px.pie(df, 
                      names='Job Title', 
                      values='Job Demand (%)', 
@@ -283,7 +272,6 @@ def show_home():
                      color='Job Title', 
                      color_discrete_sequence=px.colors.qualitative.Set2)  # A color palette for the pie chart
 
-    # Customize the layout for the pie chart with larger size
     fig_pie.update_layout(
         plot_bgcolor='rgba(0,0,0,0)',  # Transparent background
         font=dict(family='Arial, sans-serif', size=14, color='white'),  # Font styling
@@ -291,10 +279,8 @@ def show_home():
         width=800   # Increase the width of the pie chart
     )
 
-    # Display the pie chart in Streamlit
     st.plotly_chart(fig_pie)
 
-# Call the show_home function to render the page
 show_home()
 
 
