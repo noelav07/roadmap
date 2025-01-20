@@ -7,7 +7,6 @@ def show_roadmap_generator():
 
     # Add spacing for better visual separation
     st.markdown("<hr>", unsafe_allow_html=True)
-
     # Input fields for skills and career goal
     st.subheader("Step 1: Enter Your Skills 🛠️")
     skills = st.text_area(
