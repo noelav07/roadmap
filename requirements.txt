@@ -2,3 +2,9 @@ streamlit
 boto3
 st-pages
 plotly
+uuid
+langchain
+boto3
+langchain-community
+langchain-aws
+transformers
