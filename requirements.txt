@@ -8,3 +8,4 @@ boto3
 langchain-community
 langchain-aws
 transformers
+# streamlit-scrollable-textbox
