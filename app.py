@@ -1,31 +1,27 @@
-# import streamlit as st
-# from st_pages import add_page_title, get_nav_from_toml
-
-# st.set_page_config(layout="wide")
-
-# # Load the pages navigation from the .toml file
-# nav = get_nav_from_toml(".streamlit/pages.toml")
-
-# # Display the navigation and page title
-# pg = st.navigation(nav)
-
-# add_page_title(pg)
-
-# # Run the selected page
-# pg.run()
-
 import streamlit as st
+import os
 
-# Define the pages and their respective paths
-pages = [
-    st.Page("pages/home.py", title="🏠 Home"),
-    st.Page("pages/roadmap_generator.py", title="🛣️ Roadmap Generator"),
-    st.Page("pages/chat.py", title="🤖 Assistant "),
-    st.Page("pages/popular_roadmaps.py", title="👩‍💻 Popular Roadmaps")
-]
+# Define the mapping of pages to file paths
+pages = {
+    "🏠 Home": "crops/home.py",
+    "🛣️ Roadmap Generator": "crops/roadgen.py",
+    "🤖 Assistant": "crops/chat.py",
+    "👩‍💻 Popular Roadmaps": "crops/popular_roadmaps.py"
+}
 
-# Set up navigation
-pg = st.navigation(pages)
+# Sidebar for navigation with radio buttons
+page_selection = st.sidebar.radio(
+    "Navigate to:",  # Label for the radio button group
+    list(pages.keys()),
+    label_visibility="collapsed"  # Ensure the label is collapsed
+)
 
-# Run the selected page
-pg.run()
+# Load and execute the selected page
+selected_page = pages[page_selection]
+
+if os.path.exists(selected_page):
+    with open(selected_page, "r") as file:
+        code = file.read()
+        exec(code, globals())
+else:
+    st.error(f"Page not found: {selected_page}")

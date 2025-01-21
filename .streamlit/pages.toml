@@ -1,19 +1,19 @@
 [[pages]]
-path = "pages/home.py"
+path = "crops/home.py"
 name = "Landing Page"
 icon = "🏠"
 
 [[pages]]
-path = "pages/roadmap_generator.py"
+path = "crops/roadgen.py"
 name = "Career Path"
 icon = "🗺️"
 
 [[pages]]
-path = "pages/chat.py"
+path = "crops/chat.py"
 name = "Queries"
 icon = "💬"
 
 [[pages]]
-path = "pages/popular_roadmaps.py"
+path = "crops/popular_roadmaps.py"
 name = "Popular Paths"
 icon = "🗺️"

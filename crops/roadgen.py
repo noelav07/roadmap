@@ -1,6 +1,7 @@
 import streamlit as st
 import boto3
 import json
+import os
 
 # Initialize Bedrock client
 bedrock = boto3.client(service_name="bedrock-runtime")
@@ -54,7 +55,7 @@ def show_roadmap_generator():
 
         with col1:
             # Input fields for skills and career goal
-            st.subheader("Step 1: Enter Your Skills 🛠️")
+            st.subheader("Enter Your Skills ")
             skills = st.text_area(
                 "Skills (e.g., Python, Docker, Linux, AWS)",
                 placeholder="e.g., Python, Docker, Linux, AWS",
@@ -62,7 +63,7 @@ def show_roadmap_generator():
                 label_visibility="collapsed"
             )
             
-            st.subheader("Step 2: Define Your Career Goal 🎯")
+            st.subheader("Define Your Career Goal ")
             goal = st.text_input(
                 "Career Goal (e.g., DevOps Engineer)",
                 placeholder="e.g., DevOps Engineer",
@@ -88,8 +89,8 @@ def show_roadmap_generator():
                     <div class="divider-vertical-line"></div>
                     <style>
                         .divider-vertical-line {
-                            border-left: 2px solid rgba(49, 51, 63, 0.2);
-                            height: 350px;  /* Adjust the height as needed */
+                            border-left: 2px solid rgba(255, 255, 255, 0.2);
+                            height: 650px;
                             margin: auto;
                         }
                     </style>
@@ -102,8 +103,7 @@ def show_roadmap_generator():
                 st.markdown("### **Generated Career Roadmap:**")
                 st.write(st.session_state.roadmap)
             else:
-                st.write("Your roadmap will appear here once it's generated.")
+                st.write("The Roadmap will appear here once it's generated.")
 
-# Call the function to display the roadmap generator page
 if __name__ == "__main__":
     show_roadmap_generator()

@@ -159,6 +159,7 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
+# st.set_page_config(page_title="IT Jobs Salary and Demand Comparison", layout="wide")
 
 job_titles = ['Software Engineer', 'DevOps Engineer', 'Data Scientist', 'Cybersecurity Analyst', 'Cloud Architect']
 average_salaries = [120000, 115000, 130000, 110000, 140000]
@@ -167,7 +168,7 @@ job_demand = [85, 90, 92, 80, 95]  # Hypothetical job demand percentage
 data = {'Job Title': job_titles, 'Average Salary (USD)': average_salaries, 'Job Demand (%)': job_demand}
 df = pd.DataFrame(data)
 
-st.set_page_config(page_title="IT Jobs Salary and Demand Comparison", layout="wide")
+# st.set_page_config(page_title="IT Jobs Salary and Demand Comparison", layout="wide")
 
 def show_home():
     st.markdown(
@@ -194,8 +195,8 @@ def show_home():
         }
         .feature-box {
             width: 30%;
-            padding: 20px;
-            margin: 15px;
+            padding: 10px;
+            margin: 10px;
             border: 1px solid #ddd;
             border-radius: 10px;
             text-align: center;
@@ -214,7 +215,7 @@ def show_home():
         .feature-box p {
             font-size: 1em;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         </style>
 
