@@ -10,8 +10,8 @@ def generate_roadmap(skills, goal):
     # Prepare the payload for the Bedrock model
     prompt = f"""
     [INST]
-    The user has the following skills: {skills}.
-    Their career goal is: {goal}.
+    The user has the following skills: {skills if skills else 'N/A'}.
+    Their career goal is: {goal if goal else 'N/A'}.
     Generate a detailed, concise, and actionable career roadmap including:
     1. Key career paths based on their skills and goal.
     2. Essential skills or tools they should learn next.
@@ -51,7 +51,7 @@ def show_roadmap_generator():
     # Create a container with larger space between input and output sections
     with st.container():
         # Create three columns with a larger space between input and output sections
-        col1, col2, col3 = st.columns([30, 0.5, 30])  # Adjust column widths as needed
+        col1, col2, col3 = st.columns([1, 0.1, 1])  # Adjust column widths as needed
 
         with col1:
             # Input fields for skills and career goal
