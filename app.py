@@ -4,7 +4,7 @@ import os
 # Define the mapping of pages to file paths
 pages = {
     "🏠 Home": "crops/home.py",
-    "🛣️ Roadmap Generator": "roadgen.py",
+    "🛣️ Roadmap Generator": "crops/roadgen.py",
     "🤖 Assistant": "crops/chat.py",
     "👩‍💻 Popular Roadmaps": "crops/popular_roadmaps.py"
 }

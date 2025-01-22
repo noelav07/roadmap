@@ -43,7 +43,7 @@ def generate_roadmap(skills, goal):
 def show_roadmap_generator():
     # Title with styling for a professional look
     st.markdown("<h1 style='color: green; text-align: center;'>Roadmap Generator</h1>", unsafe_allow_html=True)
-    st.write("Create a personalized career roadmap by providing your skills and career goal. Let's get started!")
+    st.write("Create a personalized career roadmap by providing your skills and career goal.", anchor=False)
 
     # Add spacing for better visual separation
     st.markdown("<hr>", unsafe_allow_html=True)
@@ -55,7 +55,7 @@ def show_roadmap_generator():
 
         with col1:
             # Input fields for skills and career goal
-            st.subheader("Enter Your Skills ")
+            st.subheader("Enter Your Skills ", anchor=False)
             skills = st.text_area(
                 "Skills (e.g., Python, Docker, Linux, AWS)",
                 placeholder="e.g., Python, Docker, Linux, AWS",
@@ -63,7 +63,7 @@ def show_roadmap_generator():
                 label_visibility="collapsed"
             )
             
-            st.subheader("Define Your Career Goal ")
+            st.subheader("Define Your Career Goal ", anchor=False)
             goal = st.text_input(
                 "Career Goal (e.g., DevOps Engineer)",
                 placeholder="e.g., DevOps Engineer",
@@ -89,7 +89,7 @@ def show_roadmap_generator():
                     <div class="divider-vertical-line"></div>
                     <style>
                         .divider-vertical-line {
-                            border-left: 2px solid rgba(255, 255, 255, 0.2);
+                            border-left: 4px solid rgb(31, 18, 36);
                             height: 650px;
                             margin: auto;
                         }
