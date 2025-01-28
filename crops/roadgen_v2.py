@@ -14,7 +14,7 @@ def generate_roadmap(skills, goal):
     1. Key career paths based on their skills and goal.
     2. Essential skills or tools they should learn next.
     3. Steps to improve and advance in their career.
-    Keep the output clear, crisp, and straight to the point.
+    Keep the output clear, crisp, straight to the point and under 400 words in total, the output should be in bulletin points with proper subheadings .
     """
     payload = {
         "prompt": prompt,

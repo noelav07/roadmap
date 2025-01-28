@@ -10,9 +10,9 @@ def show_popular_roadmaps():
 
     # Roadmap Images and Download Buttons
     # Embed the images directly and set the width to a smaller size (e.g., 200px for better visibility)
-    backend_img = "./thumb/backend.jpg"
-    devops_img = "./thumb/devops.jpg"
-    aws_img = "./thumb/aws.jpg"
+    backend_img = "./thumb/edit/devops.jpg"
+    devops_img = "./thumb/edit/devops.jpg"
+    aws_img = "./thumb/edit/devops.jpg"
 
     # Create a layout with columns for better visual arrangement
     cols = st.columns(3)

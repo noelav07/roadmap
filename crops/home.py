@@ -23,7 +23,7 @@ def show_home():
         }
         .landing-subtitle {
             font-size: 1.5em;
-            color: #555;
+            color: #FFF;
             text-align: center;
             margin-top: 10px;
         }
@@ -55,7 +55,8 @@ def show_home():
         .feature-box p {
             font-size: 1em;
             color: #666;
-            margin-bottom: 15px;
+            margin: 0;
+            padding-top: 5px;
         }
         </style>
 
@@ -67,15 +68,15 @@ def show_home():
         <div class="features">
             <div class="feature-box">
                 <h3>Generate Roadmaps</h3>
-                <p>Create customized learning paths based on your skills and goals.</p>
+                <p style= 'padding-top: 0px; margin: 0;'>Create customized learning paths based on your skills and goals.</p>
             </div>
             <div class="feature-box">
                 <h3>Interactive Chat</h3>
-                <p>Get guidance and answers to your career-related queries.</p>
+                <p style= 'padding-top: 35px; margin: 0;' >Get guidance and answers to your career-related queries.</p>
             </div>
             <div class="feature-box">
                 <h3>Popular Roadmaps</h3>
-                <p>Explore and download ready-made roadmaps for top IT roles.</p>
+                <p style= 'padding-top: 0px; margin: 0;'>Explore and download ready-made roadmaps for top IT roles.</p>
             </div>
         </div>
     """, unsafe_allow_html=True)
@@ -125,7 +126,7 @@ def show_dashboard():
                 ].values[0]
                 st.metric(
                     label=skill_category,
-                    value=f"{total_openings:,} job openings",
+                    value=f"{total_openings:,} jobs ",
                 )
         else:
             st.write(f"Skill category '{skill_category}' not found in the dataset.")
@@ -141,7 +142,7 @@ def show_dashboard():
 
     filtered_data["month"] = filtered_data["month"].apply(lambda x: f"{x:02d}")
 
-    st.write(f"**Job Openings for {selected_skill_category} in {YEAR}**")
+    st.write(f"**Job Openings for {selected_skill_category} in 2023-2024**")
     st.bar_chart(filtered_data.set_index("month")["job_openings"])
 
 # Display sections in the desired order
