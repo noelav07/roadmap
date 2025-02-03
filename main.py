@@ -22,11 +22,22 @@ popular = st.Page(
     title="Popular Roadmaps",
     icon=":material/map:",
 )
+Career = st.Page(
+    "crops/openings.py",
+    title="Job Openings",
+    icon=":material/work:",
+)
+resume_optimiser = st.Page(
+    "crops/resume.py",
+    title="Resume Optimiser",
+    icon=":material/plagiarism:",
+)
+
 
 pg = st.navigation(
     {
         "Info": [home],
-        "Sections": [roadmap_generator, chat, popular],
+        "Sections": [roadmap_generator, chat, popular,Career, resume_optimiser],
     }
 )
 
