@@ -79,3 +79,5 @@ if prompt := st.chat_input("You are talking to an AI. Ask your career-related qu
 if st.button("Clear Chat"):
     st.session_state.messages = []
     clear_memory(st.session_state["llm_chain"])
+
+

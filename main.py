@@ -1,5 +1,11 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Jobs",
+    page_icon="🚀",
+    layout="wide"
+)
+
 home = st.Page(
     "crops/home.py",
     title="Home",
@@ -46,3 +52,5 @@ st.sidebar.markdown("🗂️Career Assistance ")
 
 # --- RUN NAVIGATION ---
 pg.run()
+
+
